@@ -1,13 +1,19 @@
 #Initializing the system
 import random
+import datetime
 
-database = {} #dictionary
+now = datetime.datetime.now()
 prettyLine = "==========================================================" #line to make app more readable
+database = {} #dictionary
+
+
 
 def init():
 
     print(prettyLine)
     print("|              ***Welcome to Bank of Mario***            |")
+    print("|                  Current date and time :               |")
+    print(now.strftime("|                   %Y-%m-%d %H:%M:%S                  |"))
     print(prettyLine)
 
     haveAccount = int(input(("Do you have an account with us: (1) YES (2) NO (3) EXIT \n")))
@@ -19,6 +25,7 @@ def init():
         exit()
     else:
         print("You have selected an invalid option")
+        
 
 #Login Function
 def login():
